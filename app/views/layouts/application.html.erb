@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogLaurepeu</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="description" content="Des informations; conseils; tech;html;fille;css;rasbperry;livres;conférences;lille;paris;autoentrepreneur;test;coder;geek;tech">
+    <meta name="author" content="Laure Peucelle">
+    <link rel="icon" href="../../../../favicon.ico">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= render 'layouts/navigation' %>
+    <% flash.each do |name, msg| %>
+      <ul>
+      <li><%= msg %></li>
+      </ul>
+  <% end %>
+    <%= yield %>
+  <%= render 'layouts/footer' %>
+  </body>
+</html>
