@@ -51,7 +51,7 @@ html {
     align-items: center;
   }
   .footer-links a {
-    color: black;
+    color: #F85959;
     opacity: 0.15;
     text-decoration: none;
     font-size: 24px;
@@ -118,7 +118,7 @@ html {
     align-items: center;
   }
   .footer-links a {
-    color: black;
+    color: #F85959;
     opacity: 0.15;
     text-decoration: none;
     font-size: 24px;
@@ -151,4 +151,11 @@ body {
 .article-meta-details {
   border-top: 1px solid #eaeaea;
   margin-top: 15px;
+ }
+
+
+ .btn-main{
+    background-color:white;
+    color:#F85959; 
+    border-color:#F85959
  }

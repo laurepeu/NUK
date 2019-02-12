@@ -1,4 +1,4 @@
-<%= link_to 'About', about_path %>
+<%# <%= link_to 'About', about_path %>
 
 <section class="jumbotron text-center">
    <h1 class="jumbotron-heading">La curiosité est un joli défaut</h1>
@@ -9,18 +9,21 @@
       <br> Albert Einstein</p>
       </p> -->
    <div class="container">
-      <button type="button" id="reveal" class="btn btn-primary my-2" style="background-color:#F85959; border-color:#F85959">Les conférences</button>
-      <br>
-      <button type="button" id="revealbook"  class="btn btn-secondary my-2" style="background-color:white;color:#F85959; border-color:#F85959">Les livres</button>
-      </p>
+      <div class="btn btn-secondary my-2" style="background-color:white;color:#F85959; border-color:#F85959">
+         <%= link_to 'livre','livre', :class => "btn-main" %> |
+      </div>
+      <div class="btn btn-secondary my-2" style="background-color:white;color:#F85959; border-color:#F85959">
+         <%= link_to 'conference','conference', :class => "btn-main" %> |
+      </div>
    </div>
+
 </section>
 <div class="album py-5 bg-light">
 <div class="container">
    <div class="row">
       <div class="col-md-4">
          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/raspberry.jpg" alt="Card image cap"  style="height:225px">
+           <%= image_tag "raspberry" , size: "225px", alt: "rasberry" %>
             <div class="card-body">
                <p class="card-text"> Test : Créer son propre serveur avec une Rasberry Pie 3</p>
                <div class="d-flex justify-content-between align-items-center">
@@ -36,7 +39,7 @@
       </div>
       <div class="col-md-4">
          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/microsoft.jpg" alt="Card image cap" style="height:225px">
+            <%= image_tag "raspberry" , size: "225px", alt: "rasberry" %>
             <div class="card-body">
                <p class="card-text"> Conférence : l Intelligence Artificielle vu par Microsoft</p>
                <div class="d-flex justify-content-between align-items-center">
@@ -51,7 +54,7 @@
       </div>
       <div class="col-md-4">
          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/hep.png" alt="Card image cap" style="height:225px">
+             <%= image_tag "raspberry" , size: "225px", alt: "rasberry" %>
             <div class="card-body">
                <p class="card-text">Livre : Hackers & Painters de Paul Graham</p>
                <div class="d-flex justify-content-between align-items-center">

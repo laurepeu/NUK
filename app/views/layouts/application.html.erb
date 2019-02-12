@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlogLaurepeu</title>
+    <title>Now U Know</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="description" content="Des informations; conseils; tech;html;fille;css;rasbperry;livres;conférences;lille;paris;autoentrepreneur;test;coder;geek;tech">
     <meta name="author" content="Laure Peucelle">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="icon" href="nuk-small.ico">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <!-- Font awesome --> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
 
   <body>
   <%= render 'layouts/navigation' %>
     <%= yield %>
   <%= render 'layouts/footer' %>
-  <%= debug(params) if Rails.env.development? %>
+  <%# <%= debug(params) if Rails.env.development? %>
   </body>
 
 </html>
