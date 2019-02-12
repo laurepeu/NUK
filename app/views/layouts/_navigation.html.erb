@@ -27,7 +27,9 @@
 </div>
 <div class="navbar navbar-light" style="background-color:#F85959">
   <div class="container d-flex justify-content-between">
-    <%= link_to "NUk", root_path, class: "navbar-brand d-flex align-items-center", id: "logo" %>
+  <%= link_to root_path do %>
+  <%= image_tag "nuk", alt: "rasberry" %>
+  <% end %>
       <strong><i class="fas fa-bullhorn"></i>  Now You Know</strong>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">

@@ -13,7 +13,10 @@
             <ul class="list-unstyled mt-3 mb-4">
                <li> Paul Graham nous explique la convergence entre l'artiste et le developpeur </li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="color:#F85959; border-color:#F85959">Lire l'article</button>
+            <%# <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="color:#F85959; border-color:#F85959">Lire l'article</button> %>
+            <div class="btn btn-lg btn-block btn-outline-primary" style="color:#F85959; border-color:#F85959">
+            <%= link_to "Lire l'article","articles_main", :class => "btn-main" %> |
+      </div>
          </div>
       </div>
       <div class="card mb-4 box-shadow">

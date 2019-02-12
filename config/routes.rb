@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'livre', to: 'pages#livre'
   get 'conference', to: 'pages#conference'
   get 'articles_main', to:'pages#articles_main'
+  get 'articles_admin', to:'pages#articles_admin'
   resources :articles
 end

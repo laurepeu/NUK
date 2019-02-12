@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2019_01_13_211156) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    # t.text "category"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "user_id"
