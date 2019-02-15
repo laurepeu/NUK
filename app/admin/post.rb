@@ -8,7 +8,6 @@ ActiveAdmin.register Article do
       column :title
       column :description
       actions
-
     end
   
   end
