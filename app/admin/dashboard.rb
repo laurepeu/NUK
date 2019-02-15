@@ -11,46 +11,32 @@ ActiveAdmin.register_page "Dashboard" do
     end
 
 
-    
-    # Here is an example of a simple dashboard with columns and panels.
-    #
     # columns do
     #   column do
-    #     panel "Recent Posts" do
-    #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
-    #         end
+    #     panel "Recent post" do
+    #       Article.all do
+    #         article.title
     #       end
     #     end
     #   end
-
-    #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
-    #     end
-    #   end
     # end
-  end # content
+
+  columns do
+    column do
+      panel "Recent post" do
+        attributes_table_for Article.all do
+          row :id
+          row :title
+          row :description
+        ul do         
+            li link_to article.title, article_path(article)
+            li link_to article.title, article_path(article)
+            li link_to "Edit", edit_article_path(article)
+            li link_to "Delete", article_path(article), method: :delete, data: { confirm: "Are you sure you want to delete this article?"}
+          end
+        end
+      end
+    end
+  end 
+  end
 end
-
-
-# <h1 align="center">Listing all articles</h1>
-# <% @articles.each do |article| %>
-#  <div class="row">
-#   <div class="col-lg-12 col-xs-offset-2">
-#    <div class="well well-lg">
-#     <div class="article-title">
-#      <%= link_to article.title, article_path(article) %>
-#     </div>
-#     <div class="article-body">
-#         <%= truncate(article.description, length: 100) %>
-#     </div>
-#     <div class="article-actions">
-#         <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
-#         <%= link_to "Delete", article_path(article), method: :delete, data: { confirm: "Are you sure you want to delete this article?"}, class: "btn btn-xs btn-danger" %>
-#     </div>
-#    </div>
-#   </div>
-#  </div>
-# <% end %>
