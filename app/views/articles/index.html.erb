@@ -12,7 +12,7 @@
             <div class="card-deck col-md-4 text-center">
                 <div class="card mb-4 box-shadow">
                     <div class="card-header" style="background-color:#F85959; border-color:#F85959">
-                        <h4 class="my-0 font-weight-normal"> Inspiration</h4>
+                        <h4 class="my-0 font-weight-normal"> <%= link_to article.category, article_path(article) %></h4>
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">     <%= link_to article.title, article_path(article) %></h1>

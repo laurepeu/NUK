@@ -7,6 +7,7 @@ ActiveAdmin.register Article do
       column :id
       column :title
       column :description
+      column :category
       actions
     end
   
