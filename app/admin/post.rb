@@ -1,6 +1,6 @@
 ActiveAdmin.register Article do
 
-    permit_params :title, :description
+    permit_params :title, :description, :category
 
 
     index do

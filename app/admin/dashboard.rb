@@ -10,33 +10,24 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-
+    # Here is an example of a simple dashboard with columns and panels.
+    #
     # columns do
     #   column do
-    #     panel "Recent post" do
-    #       Article.all do
-    #         article.title
+    #     panel "Recent Posts" do
+    #       ul do
+    #         Post.recent(5).map do |post|
+    #           li link_to(post.title, admin_post_path(post))
+    #         end
     #       end
     #     end
     #   end
-    # end
 
-  columns do
-    column do
-      panel "Recent post" do
-        attributes_table_for Article.all do
-          row :id
-          row :title
-          row :description
-        ul do         
-            li link_to article.title, article_path(article)
-            li link_to article.title, article_path(article)
-            li link_to "Edit", edit_article_path(article)
-            li link_to "Delete", article_path(article), method: :delete, data: { confirm: "Are you sure you want to delete this article?"}
-          end
-        end
-      end
-    end
-  end 
-  end
+    #   column do
+    #     panel "Info" do
+    #       para "Welcome to ActiveAdmin."
+    #     end
+    #   end
+    # end
+  end # content
 end

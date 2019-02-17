@@ -1,9 +1,25 @@
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+<%# <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
    <h1 class="display-4">Les livres </h1>
    <p class="lead">Tempor id cupidatat officia esse ipsum laboris eiusmod.</p>
-</div>
+</div> %>
 
-
+<section class="jumbotron text-center">
+   <h1 class="jumbotron-heading">La curiosité est un joli défaut</h1>
+   <br>
+   <br>
+   <!-- <p class="lead">
+      "L’important est de ne jamais s’arrêter de se questionner, la curiosité a sa propre raison d’exister"
+      <br> Albert Einstein</p>
+      </p> -->
+   <!-- <div class="container">
+      <div class="btn btn-secondary my-2" style="background-color:white;color:#F85959; border-color:#F85959">
+         <%= link_to 'livre','livre', :class => "btn-main" %> 
+      </div>
+      <div class="btn btn-secondary my-2" style="background-color:white;color:#F85959; border-color:#F85959">
+         <%= link_to 'conference','conference', :class => "btn-main" %>
+      </div>
+   </div>-->
+</section>
 
 <div class="d-flex align-items-start">
     <div class="container">
@@ -12,7 +28,7 @@
             <div class="card-deck col-md-4 text-center">
                 <div class="card mb-4 box-shadow">
                     <div class="card-header" style="background-color:#F85959; border-color:#F85959">
-                        <h4 class="my-0 font-weight-normal"> <%= link_to article.category, article_path(article) %></h4>
+                        <h4 class="my-0 font-weight-normal category_btn"> <%= link_to article.category, article_path(article) %></h4>
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">     <%= link_to article.title, article_path(article) %></h1>
@@ -20,7 +36,7 @@
                             <li>  <%= truncate(article.description, length: 100) %></li>
                         </ul>
                         <%# <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="color:#F85959; border-color:#F85959">Lire l'article</button> %>
-                        <div class="btn btn-lg btn-block btn-outline-primary" style="color:#F85959; border-color:#F85959">
+                        <div class="btn btn-lg btn-block btn-outline article_btn">
                             <%= link_to "Lire l'article", article_path(article),  :class => "btn-main"  %>
                         </div>
                     </div>
