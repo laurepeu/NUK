@@ -3,8 +3,9 @@
         <h2 class="display-10 category_title">  <%= @article.category %></h2>
         <h1 class="display-4">  <%= @article.title %></h1>
         <img src="https://synbioz-website-attachments.s3.eu-west-1.amazonaws.com/articles/20170928/Jim%20Weirich_thumb_450.png">
-        <p class="lead text-justify"> <%= simple_format(@article.description) %></p>
     </div>
+    <p class="lead text-justify"> <%= simple_format(@article.description) %></p>
+    <p class="lead text-justify"> <%= @article.created_at %></p>
 </div> 
 
 <%# <h2 align="center">Title: <%= @article.category %></h2> 
