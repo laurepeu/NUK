@@ -1,11 +1,14 @@
 <div class="container">
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h2 class="display-10 category_title">  <%= @article.category %></h2>
+        <br>
         <h1 class="display-4">  <%= @article.title %></h1>
         <img src="https://synbioz-website-attachments.s3.eu-west-1.amazonaws.com/articles/20170928/Jim%20Weirich_thumb_450.png">
     </div>
     <p class="lead text-justify"> <%= simple_format(@article.description) %></p>
-    <p class="lead text-justify"> <%= @article.created_at %></p>
+    <p class="lead text-justify" style="color:#F85959"> Glossaire: <br></p> <p> <%= @article.glossaire %></p>
+    <p class="lead text-justify" style="color:#F85959"> Sources: <br></p> <p> <%= @article.sources %></p>
+    <p class="lead text-justify" style="color:#F85959"> Article créé le <%= @article.created_at %> par Laure Peu </p>
 </div> 
 
 <%# <h2 align="center">Title: <%= @article.category %></h2> 
