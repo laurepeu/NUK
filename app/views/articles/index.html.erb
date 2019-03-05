@@ -31,9 +31,9 @@
                         <h4 class="my-0 font-weight-normal category_btn"> <%= link_to article.category, article_path(article) %></h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">     <%= link_to article.title, article_path(article) %></h1>
+                        <h1 class="card-title pricing-card-title">     <%= link_to article.short_title, article_path(article) %></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li>  <%= truncate(article.description, length: 100) %></li>
+                            <li>  <%= truncate(article.short_description, length: 150) %></li>
                         </ul>
                         <%# <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="color:#F85959; border-color:#F85959">Lire l'article</button> %>
                         <div class="btn btn-lg btn-block btn-outline article_btn">

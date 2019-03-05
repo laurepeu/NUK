@@ -6,8 +6,8 @@
         <img src="https://synbioz-website-attachments.s3.eu-west-1.amazonaws.com/articles/20170928/Jim%20Weirich_thumb_450.png">
     </div>
     <p class="lead text-justify"> <%= simple_format(@article.description) %></p>
-    <p class="lead text-justify" style="color:#F85959"> Glossaire: <br></p> <p> <%= @article.glossaire %></p>
-    <p class="lead text-justify" style="color:#F85959"> Sources: <br></p> <p> <%= @article.sources %></p>
+    <p class="lead text-justify" style="color:#F85959"> Glossaire: <br></p> <a> <%= @article.glossaire %></a>
+    <p class="lead text-justify" style="color:#F85959"> Sources: <br></p> <a> <%= @article.sources %></a>
     <p class="lead text-justify" style="color:#F85959"> Article créé le <%= @article.created_at %> par Laure Peu </p>
 </div> 
 
