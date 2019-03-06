@@ -5,7 +5,7 @@ ActiveAdmin.register Article do
     index do
       column :id
       column :title
-      column :description
+      column :description 
       column :short_title
       column :short_description
       column :category

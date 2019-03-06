@@ -72,3 +72,8 @@ gem 'activeadmin'
 # gem 'meta_search'
 
  gem 'devise'
+
+# # gem 'active admin html edior'
+#  gem 'activeadmin_froala_editor'
+
+gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
