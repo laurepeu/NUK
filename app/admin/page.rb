@@ -25,6 +25,7 @@ ActiveAdmin.register Article do
         f.input :title
         f.input :category
         f.input :description, as: :html_editor
+        f.input :short_description, as: :html_editor
       end
   
       para "Press cancel to return to the list without saving."
