@@ -1,10 +1,13 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
+
 set :application, "blog-laurepeu"
-set :repo_url, "git@github.com:laurepeu/NUK.git"
-
-
+set :repo_url, "git@github.com:laurepeu/nyk.git"
+set :deploy_to, '/home/nowuknowrl'
+set :stage, :production
+set :use_sudo, true
+set :branch, 'master'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

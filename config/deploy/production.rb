@@ -7,8 +7,13 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server '192.168.0.16', user: 'yanni', roles: %w{app web db}, ssh_options: { forward_agent: true }
+# server '192.168.0.16', user: 'yanni', roles: %w{app web db}, ssh_options: { forward_agent: true }
 
+server "188.165.53.185", roles: %{web},port: 22, ssh_options: {
+    user: "nowuknowrl",
+    forward_agent: true,
+    auth_methods: %w(3410rOti)
+}
 # role-based syntax
 # ==================
 
