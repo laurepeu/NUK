@@ -3,11 +3,11 @@ lock "~> 3.11.0"
 
 
 set :application, "blog-laurepeu"
-set :repo_url, "git@github.com:laurepeu/nyk.git"
-set :deploy_to, '/home/nowuknowrl'
+set :repo_url, "git@github.com:laurepeu/NUK.git"
 set :stage, :production
-set :use_sudo, true
 set :branch, 'master'
+set :tmp_dir, "#{fetch(:home)}/tmp"
+set :rvm_map_bins
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

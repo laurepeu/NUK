@@ -1,19 +1,18 @@
 # server-based syntax
 # ======================
+require 'capistrano/ssh_doctor'
+
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
-# server "db.example.com", user: "deploy", roles: %w{db}
+server "ssh.cluster021.hosting.ovh.net", user: "nowuknowrl", roles: %w{web}, forward_agent: true, keys: %w(/Users/laurepeucelle/.ssh/id_rsa)
+# set :deploy_to, '/home/nowuknowrl'
 
 # server '192.168.0.16', user: 'yanni', roles: %w{app web db}, ssh_options: { forward_agent: true }
 
-server "188.165.53.185", roles: %{web},port: 22, ssh_options: {
-    user: "nowuknowrl",
-    forward_agent: true,
-    auth_methods: %w(3410rOti)
-}
+
 # role-based syntax
 # ==================
 
@@ -54,13 +53,22 @@ server "188.165.53.185", roles: %{web},port: 22, ssh_options: {
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server "example.com",
-#   user: "user_name",
+# server "ssh.cluster021.hosting.ovh.net",
+#   user: "nowuknowrl",
 #   roles: %w{web app},
 #   ssh_options: {
-#     user: "user_name", # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
+#     user: "nowuknowrl", # overrides user setting above
+#     keys: %w(/Users/laurepeucelle/.ssh/id_rsa.pub),
+#     forward_agent: true,
+#     auth_methods: %w(3410rOti)
 #     # password: "please use keys"
 #   }
+
+
+#   server "ssh.cluster021.hosting.ovh.net", roles: %{web}, ssh_options: {
+#     user: "nowuknowrl",
+#     port: 22,
+#     forward_agent: true,
+#     keys: %w(/home/laure peucelle/.ssh/id_rsa),
+#     auth_methods: %w(3410rOti)
+# }
